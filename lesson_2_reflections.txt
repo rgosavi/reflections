@@ -5,3 +5,28 @@ git creates hidden files for housekeeping.
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 a staging area allows you to keep a running list of files that you have modified towards your next planned commit.
+
+How can you use the staging area to make sure you have one commit per logical change?
+only add files planned for the next commit.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Isolating Product changes 
+	- Experimental versions can be developed in parallel with production updates
+	- Team A can work on a feature without fear only merging with master when ready. So they avoid disrupting the work of other teams.
+
+How do the diagrams help you visualize the branch structure?
+
+ Helps create a map of the repository and keep track of reachability.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+All changes are available on master with commit log ordered in time. 
+Each entry  in the commit log is not the child of its predecessor. 
+The approach is  (possibly) unique and also helpful. Removing the name of a feature branch after merging to master is great. 
+You can prevent folks from using the feature branch yet you have all the feature branch history available. 
+It is easy to see what changes were made in a commit on feature branch without seeing any changes from master.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+ Although automated merges work really well and a very useful when there are a large number of changes that are sure not to interact. 
+ However for more complex modules with interleaving changes it would be good to use automated merge but with confirmation so you can track additions to the destination as they happen.
